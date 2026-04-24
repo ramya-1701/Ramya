@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Orbitron", sans-serif;
+  
+  --color-neon-pink: #ec4899;
+  --color-neon-blue: #22d3ee;
+  --color-neon-green: #10b981;
+  --color-neon-purple: #8b5cf6;
+  
+  --color-sleek-black: #050505;
+  --color-sleek-gray: #0a0a0a;
+  --color-sleek-sidebar: #080808;
+  
+  --shadow-neon-pink: 0 0 10px rgba(236, 72, 153, 0.4), 0 0 20px rgba(236, 72, 153, 0.2);
+  --shadow-neon-blue: 0 0 10px rgba(34, 211, 238, 0.4), 0 0 20px rgba(34, 211, 238, 0.2);
+  --shadow-neon-green: 0 0 10px rgba(16, 185, 129, 0.4), 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-sleek-black text-white selection:bg-neon-pink/30;
+    overflow: hidden;
+  }
+}
+
+.neon-border-pink {
+  border: 1px solid var(--color-neon-pink);
+  box-shadow: var(--shadow-neon-pink);
+}
+
+.neon-border-blue {
+  border: 1px solid var(--color-neon-blue);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.neon-border-green {
+  border: 1px solid var(--color-neon-green);
+  box-shadow: var(--shadow-neon-green);
+}
+
+.neon-text-pink {
+  color: var(--color-neon-pink);
+  text-shadow: var(--shadow-neon-pink);
+}
+
+.neon-text-blue {
+  color: var(--color-neon-blue);
+  text-shadow: var(--shadow-neon-blue);
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
